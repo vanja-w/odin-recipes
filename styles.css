@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Berkshire";
+  src: url(./fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf);
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url(./fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "RobotoReg";
+  src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "RobotoBold";
+  src: url(./fonts/Roboto/Roboto-Bold.ttf);
+}
+
 * {
   /* don't use '0px' or any other unit, if you set the value to zero */
   padding: 0;
@@ -24,27 +43,28 @@
   max-height: 100%;
   overflow: auto;
   justify-content: center;
+  row-gap: 60px;
 }
 
-.hero-title {
+.hero-title h1 {
   color: white;
-  font-size: calc(32px + 1.5625vw);
+  font-size: calc(84px + 1vw);
+  font-family: "Berkshire";
 }
 
 .menu {
   display: flex;
   column-gap: 50px;
-  margin: 20px;
 }
 .menu a {
   text-decoration: none;
   color: white;
-  font-size: calc(12px + 1.5625vw);
+  font-size: calc(16px + 1vw);
+  font-family: "RobotoReg";
 }
 
 .button {
   background-color: rgba(62, 142, 65, 0.5);
-
   border-radius: 10px;
   border: none;
   padding: 15px 32px;
@@ -61,8 +81,32 @@
 
 .page-wrapper {
   background-color: antiquewhite;
+  padding: calc(28px + 1.5625vw);
+  display: flex;
+  flex-direction: column;
 }
 
 img {
   max-width: 100%;
+}
+
+.page-wrapper h1 {
+  text-align: center;
+  font-family: "RobotoBold";
+  font-size: 48px;
+}
+
+.page-wrapper h3 {
+  font-family: "RobotoReg";
+}
+
+.page-wrapper li,
+.page-wrapper p {
+  font-family: "RobotoLight";
+}
+
+.page-wrapper p {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
 }
